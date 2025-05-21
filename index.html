@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>订单追踪系统</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .carrier-box { margin-bottom: 20px; }
+    input { padding: 5px; width: 250px; }
+    button { padding: 5px 10px; margin-left: 5px; }
+  </style>
+</head>
+<body>
+
+  <h1>订单追踪系统</h1>
+
+  <div class="carrier-box">
+    <label for="dhl-input">DHL 运单号：</label>
+    <input type="text" id="dhl-input" placeholder="请输入 DHL 单号">
+    <button onclick="track('DHL')">查询</button>
+  </div>
+
+  <div class="carrier-box">
+    <label for="tnt-input">TNT 运单号：</label>
+    <input type="text" id="tnt-input" placeholder="请输入 TNT 单号">
+    <button onclick="track('TNT')">查询</button>
+  </div>
+
+  <div class="carrier-box">
+    <label for="db-input">DB 运单号：</label>
+    <input type="text" id="db-input" placeholder="请输入 DB 单号">
+    <button onclick="track('DB')">查询</button>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
+
