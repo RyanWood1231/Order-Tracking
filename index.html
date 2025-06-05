@@ -1,32 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>订单追踪系统</title>
   <style>
-    body { font-family: Arial; padding: 20px; }
-    .carrier-box { margin-bottom: 20px; }
-    input { padding: 5px; width: 250px; }
-    button { padding: 5px 10px; margin-left: 5px; }
+    body {
+      background-color: #0f1117;
+      color: #e3e3e3;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .tool-card {
+      background: #1c1f26;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+
+    input {
+      padding: 0.5rem;
+      width: 100%;
+      max-width: 300px;
+      border-radius: 6px;
+      border: none;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 6px;
+      background-color: #61dafb;
+      color: #0f1117;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #4ec4e0;
+    }
   </style>
 </head>
 <body>
 
-  <h1>订单追踪系统</h1>
+  <h1>📦 订单追踪系统</h1>
 
-  <div class="carrier-box">
+  <div class="tool-card">
     <label for="dhl-input">DHL 运单号：</label>
     <input type="text" id="dhl-input" placeholder="请输入 DHL 单号">
     <button onclick="track('DHL')">查询</button>
   </div>
 
-  <div class="carrier-box">
+  <div class="tool-card">
     <label for="tnt-input">TNT 运单号：</label>
     <input type="text" id="tnt-input" placeholder="请输入 TNT 单号">
     <button onclick="track('TNT')">查询</button>
   </div>
 
-  <div class="carrier-box">
+  <div class="tool-card">
     <label for="db-input">DB 运单号：</label>
     <input type="text" id="db-input" placeholder="请输入 DB 单号">
     <button onclick="track('DB')">查询</button>
@@ -35,4 +81,3 @@
   <script src="main.js"></script>
 </body>
 </html>
-
